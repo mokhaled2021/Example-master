@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.9.13 on win32)" generated="20221107 23:10:47.296" rpa="false" schemaversion="3">
+<suite id="s1" name="AcademicStructure" source="c:\Users\MKhaled\Downloads\Example-master\Example-master\TestRunner\AcademicStructure.robot">
+<test id="s1-t1" name="Add new Inistitutions" line="11">
+<kw name="User Login" library="Login">
+<arg>${username}</arg>
+<arg>${password}</arg>
+<kw name="Opening Browser" library="common">
+<arg>${site_url}${login}</arg>
+<arg>${browser}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${site_url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221107 23:10:47.980" level="INFO">Opening browser 'Chrome' to base url 'https://sis.medadstg.com/#login'.</msg>
+<status status="PASS" starttime="20221107 23:10:47.980" endtime="20221107 23:10:54.097"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Username_field}</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221107 23:10:54.098" endtime="20221107 23:10:54.148"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Login</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20221107 23:10:54.156" level="INFO">Page title is 'Login'.</msg>
+<status status="PASS" starttime="20221107 23:10:54.148" endtime="20221107 23:10:54.156"/>
+</kw>
+<status status="PASS" starttime="20221107 23:10:47.979" endtime="20221107 23:10:54.157"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221107 23:10:54.157" endtime="20221107 23:10:54.374"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Username_field}</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221107 23:10:54.374" endtime="20221107 23:10:54.406"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Username_field}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221107 23:10:54.407" level="INFO">Typing text 'mohammed.khaled@naseej.com' into text field '//*[@id='login_email']'.</msg>
+<status status="PASS" starttime="20221107 23:10:54.406" endtime="20221107 23:10:54.542"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${password_field}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221107 23:10:54.543" level="INFO">Typing text 'Medad@123' into text field '//*[@id='login_password']'.</msg>
+<status status="PASS" starttime="20221107 23:10:54.543" endtime="20221107 23:10:54.654"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${password_field}</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20221107 23:10:54.655" level="INFO">Sending key(s) ('ENTER',) to //*[@id='login_password'] element.</msg>
+<msg timestamp="20221107 23:10:54.942" level="INFO">Pressing special key ENTER to element.</msg>
+<msg timestamp="20221107 23:10:54.942" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20221107 23:10:54.654" endtime="20221107 23:10:54.972"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Home}</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221107 23:10:54.973" endtime="20221107 23:10:58.872"/>
+</kw>
+<status status="PASS" starttime="20221107 23:10:47.978" endtime="20221107 23:10:58.873"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221107 23:11:01.881" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20221107 23:10:58.874" endtime="20221107 23:11:01.886"/>
+</kw>
+<kw name="Open the AcademicStructure page" library="Inistitutions">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Academic_Structure}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221107 23:11:01.890" level="INFO">Clicking element '//*[@id='page-Workspaces']/div[2]/div[2]/div/div[3]/div[1]/div/div/div[2]/a[1]'.</msg>
+<status status="PASS" starttime="20221107 23:11:01.889" endtime="20221107 23:11:02.019"/>
+</kw>
+<status status="PASS" starttime="20221107 23:11:01.888" endtime="20221107 23:11:02.020"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221107 23:11:05.025" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20221107 23:11:02.022" endtime="20221107 23:11:05.025"/>
+</kw>
+<kw name="Open the Institution page" library="Inistitutions">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Institution}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221107 23:11:05.028" endtime="20221107 23:11:05.062"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Institution}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221107 23:11:05.063" level="INFO">Clicking element '//*[@id='page-Workspaces']/div[2]/div[2]/div/div[3]/div[2]/div[1]/div[3]/div[4]/div[2]/div[1]/div[2]/a[1]'.</msg>
+<status status="PASS" starttime="20221107 23:11:05.063" endtime="20221107 23:11:05.131"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Add_Inistitutions}</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221107 23:11:05.131" endtime="20221107 23:11:05.588"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221107 23:11:07.602" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221107 23:11:05.589" endtime="20221107 23:11:07.602"/>
+</kw>
+<status status="PASS" starttime="20221107 23:11:05.027" endtime="20221107 23:11:07.603"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221107 23:11:10.618" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20221107 23:11:07.604" endtime="20221107 23:11:10.621"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Add_Inistitutions}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221107 23:11:10.629" level="INFO">Clicking element '//*[@id='page-List/Institution/List']/div[1]/div/div/div[2]/div[2]/button[2]/span/span'.</msg>
+<status status="PASS" starttime="20221107 23:11:10.626" endtime="20221107 23:11:10.878"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221107 23:11:13.883" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20221107 23:11:10.879" endtime="20221107 23:11:13.883"/>
+</kw>
+<kw name="closing Browser" library="common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221107 23:11:13.886" endtime="20221107 23:11:16.618"/>
+</kw>
+<status status="PASS" starttime="20221107 23:11:13.885" endtime="20221107 23:11:16.621"/>
+</kw>
+<status status="PASS" starttime="20221107 23:10:47.976" endtime="20221107 23:11:16.625"/>
+</test>
+<doc>MedadCMP LoginPage</doc>
+<status status="PASS" starttime="20221107 23:10:47.313" endtime="20221107 23:11:16.641"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="AcademicStructure">AcademicStructure</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20221107 23:10:47.968" level="ERROR">Error in file 'c:\Users\MKhaled\Downloads\Example-master\Example-master\TestRunner\AcademicStructure.robot' on line 6: Error in file 'c:\Users\MKhaled\Downloads\Example-master\Example-master\TestRunner\Login.robot' on line 7: Resource file with 'Test Cases' section is invalid.</msg>
+</errors>
+</robot>
