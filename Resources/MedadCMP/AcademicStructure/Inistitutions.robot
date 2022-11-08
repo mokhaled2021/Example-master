@@ -11,10 +11,10 @@ Open the AcademicStructure page
 Open the Institution page
     Wait Until Element Is Visible    ${Institution}
     Click Element    ${Institution}
-    Wait Until Page Contains Element     ${Add_Inistitutions}     timeout=10
-    sleep  2
+    sleep  1
 
 Click button Add new Inistitutions
+    Wait Until Page Contains Element     ${Add_Inistitutions}     timeout=10
     Click Element  ${Add_Inistitutions}
 Fill field Institution Code
     Input Text    ${Institution_Code_Field}    ${Institution_Code}
@@ -57,7 +57,7 @@ Select field Date of establishment
 
 click submit button
     Click Element    ${Submit_Button}
-    Wait Until Page Contains Element    //*[@id="alert-container"]
+    Wait Until Page Contains Element    ${Successfully_Saved}
     Sleep    2
 
 Fill Form of Add Inistitutions

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.9.13 on win32)" generated="20221108 00:54:30.884" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.9.13 on win32)" generated="20221108 10:08:44.418" rpa="false" schemaversion="3">
 <suite id="s1" name="Login" source="c:\Users\MKhaled\Downloads\Example-master\Example-master\TestRunner\Login.robot">
 <test id="s1-t1" name="Login with Valid Username &amp; Password" line="8">
 <kw name="User Login" library="Login">
@@ -12,89 +12,93 @@
 <arg>${site_url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221108 00:54:31.755" level="INFO">Opening browser 'Chrome' to base url 'https://sis.medadstg.com/#login'.</msg>
-<status status="PASS" starttime="20221108 00:54:31.755" endtime="20221108 00:54:39.386"/>
+<msg timestamp="20221108 10:08:45.104" level="INFO">Opening browser 'Chrome' to base url 'https://sis.medadstg.com/#login'.</msg>
+<status status="PASS" starttime="20221108 10:08:45.103" endtime="20221108 10:08:55.325"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${Username_field}</arg>
 <arg>timeout=10</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20221108 00:54:39.387" endtime="20221108 00:54:39.433"/>
+<status status="PASS" starttime="20221108 10:08:55.325" endtime="20221108 10:08:55.367"/>
 </kw>
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>Login</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20221108 00:54:39.441" level="INFO">Page title is 'Login'.</msg>
-<status status="PASS" starttime="20221108 00:54:39.433" endtime="20221108 00:54:39.442"/>
+<msg timestamp="20221108 10:08:55.374" level="INFO">Page title is 'Login'.</msg>
+<status status="PASS" starttime="20221108 10:08:55.367" endtime="20221108 10:08:55.375"/>
 </kw>
-<status status="PASS" starttime="20221108 00:54:31.755" endtime="20221108 00:54:39.442"/>
+<status status="PASS" starttime="20221108 10:08:45.102" endtime="20221108 10:08:55.376"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20221108 00:54:39.442" endtime="20221108 00:54:39.574"/>
+<status status="PASS" starttime="20221108 10:08:55.376" endtime="20221108 10:08:55.566"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${Username_field}</arg>
 <arg>timeout=10</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20221108 00:54:39.575" endtime="20221108 00:54:39.607"/>
+<status status="PASS" starttime="20221108 10:08:55.566" endtime="20221108 10:08:55.604"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${Username_field}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221108 00:54:39.609" level="INFO">Typing text 'mohammed.khaled@naseej.com' into text field '//*[@id='login_email']'.</msg>
-<status status="PASS" starttime="20221108 00:54:39.607" endtime="20221108 00:54:39.848"/>
+<msg timestamp="20221108 10:08:55.604" level="INFO">Typing text 'mohammed.khaled@naseej.com' into text field '//*[@id='login_email']'.</msg>
+<status status="PASS" starttime="20221108 10:08:55.604" endtime="20221108 10:08:55.757"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${password_field}</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221108 00:54:39.849" level="INFO">Typing text 'Medad@123' into text field '//*[@id='login_password']'.</msg>
-<status status="PASS" starttime="20221108 00:54:39.848" endtime="20221108 00:54:39.994"/>
-</kw>
-<kw name="Press Keys" library="SeleniumLibrary">
-<arg>${password_field}</arg>
-<arg>ENTER</arg>
-<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20221108 00:54:39.996" level="INFO">Sending key(s) ('ENTER',) to //*[@id='login_password'] element.</msg>
-<msg timestamp="20221108 00:54:40.307" level="INFO">Pressing special key ENTER to element.</msg>
-<msg timestamp="20221108 00:54:40.308" level="INFO">Releasing special key ENTER.</msg>
-<status status="PASS" starttime="20221108 00:54:39.995" endtime="20221108 00:54:40.369"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${Home}</arg>
-<arg>timeout=10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20221108 00:54:40.370" endtime="20221108 00:54:44.564"/>
-</kw>
-<status status="PASS" starttime="20221108 00:54:31.754" endtime="20221108 00:54:44.564"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${Home}</arg>
-<arg>timeout=10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20221108 00:54:44.564" endtime="20221108 00:54:44.587"/>
+<msg timestamp="20221108 10:08:55.758" level="INFO">Typing text 'Medad@123' into text field '//*[@id='login_password']'.</msg>
+<status status="PASS" starttime="20221108 10:08:55.758" endtime="20221108 10:08:55.878"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
-<arg>10</arg>
+<arg>3</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221108 00:54:54.593" level="INFO">Slept 10 seconds</msg>
-<status status="PASS" starttime="20221108 00:54:44.588" endtime="20221108 00:54:54.594"/>
+<msg timestamp="20221108 10:08:58.886" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20221108 10:08:55.878" endtime="20221108 10:08:58.886"/>
 </kw>
-<status status="PASS" starttime="20221108 00:54:31.752" endtime="20221108 00:54:54.594"/>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Type=submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221108 10:08:58.888" level="INFO">Clicking button 'Type=submit'.</msg>
+<msg timestamp="20221108 10:08:59.627" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20221108 10:08:59.628" level="FAIL">Button with locator 'Type=submit' not found.</msg>
+<status status="FAIL" starttime="20221108 10:08:58.887" endtime="20221108 10:08:59.633"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Home}</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20221108 10:08:59.634" endtime="20221108 10:08:59.635"/>
+</kw>
+<status status="FAIL" starttime="20221108 10:08:45.101" endtime="20221108 10:08:59.637"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Home}</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20221108 10:08:59.638" endtime="20221108 10:08:59.638"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20221108 10:08:59.639" endtime="20221108 10:08:59.639"/>
+</kw>
+<status status="FAIL" starttime="20221108 10:08:45.100" endtime="20221108 10:08:59.640">Button with locator 'Type=submit' not found.</status>
 </test>
 <doc>MedadCMP LoginPage</doc>
-<status status="PASS" starttime="20221108 00:54:30.946" endtime="20221108 00:54:54.596"/>
+<status status="FAIL" starttime="20221108 10:08:44.434" endtime="20221108 10:08:59.644"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Login">Login</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Login">Login</stat>
 </suite>
 </statistics>
 <errors>
