@@ -1,15 +1,16 @@
+# ===== Login Fields ==========
 Username_field = "//*[@id='login_email']"
 password_field = "//*[@id='login_password']"
 Login_Button = "/html/body/div[1]/div[1]/div[2]/div/section[1]/div/form/div[2]\Button"
 Home = "//*[@id='page-Workspaces']/div[1]/div/div/div[1]/div/div/div[1]/h3"
 Institution_title = "//*[@id='page-Institution']/div[1]/div/div/div[1]/div/div/div[1]/h3"
 
-# ==== Links ============
+# ==== Links Locators ============
 Academic_Structure = "//*[@id='page-Workspaces']/div[2]/div[2]/div/div[3]/div[1]/div/div/div[2]/a[1]"
 Institution = "//*[@id='page-Workspaces']/div[2]/div[2]/div/div[3]/div[2]/div[1]/div[3]/div[4]/div[2]/div[1]/div[2]/a[1]"
 Add_Inistitutions = "//*[@id='page-List/Institution/List']/div[1]/div/div/div[2]/div[2]/button[2]/span/span"
 
-# ======= Add New Institutions ========
+# ======= Add New Institutions Fileds ========
 Institution_Code_Field = "//*[@id='page-Institution']/div[2]/div[2]/div/div[3]/div[2]/div[1]/div[2]/div/div/div[3]/div/div/div/form/div[2]/div/div[2]/div[1]/input"
 Institution_Name_Field = "//*[@id='page-Institution']/div[2]/div[2]/div/div[3]/div[2]/div[1]/div[2]/div/div/div[3]/div/div/div/form/div[3]/div/div[2]/div[1]/input"
 Institutional_Type_Field ="//*[@id='page-Institution']/div[2]/div[2]/div/div[3]/div[2]/div[1]/div[2]/div/div/div[3]/div/div/div/form/div[4]/div/div[2]/div[1]/div/div/input"
