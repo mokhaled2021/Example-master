@@ -7,11 +7,12 @@ Variables   ../TestData/TestData.py
 *** keywords***
 Open the AcademicStructure page
     Click Element    ${Academic_Structure}
+    sleep  2
 
 Open the Institution page
     Wait Until Element Is Visible    ${Institution}
     Click Element    ${Institution}
-    sleep  1
+    sleep  2
 
 Click button Add new Inistitutions
     Wait Until Page Contains Element     ${Add_Inistitutions}     timeout=10
