@@ -1,8 +1,8 @@
 *** Settings ***
 Library     SeleniumLibrary
 Resource    ../AcademicStructure/Login.robot
+Variables    ../TestData/TestData.py
 Variables   ../Locators/locators.py
-Variables   ../TestData/TestData.py
 
 *** keywords***
 Open the AcademicStructure page

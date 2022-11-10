@@ -2,8 +2,8 @@
 Library     SeleniumLibrary
 Resource    ../AcademicStructure/common.robot
 Variables   ../Locators/locators.py
-Variables   ../TestData/TestData.py
-
+Variables    ../TestData/TestData.py
+   
 *** Keywords ***
 
 User Login 

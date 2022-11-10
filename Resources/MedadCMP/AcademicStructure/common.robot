@@ -1,8 +1,6 @@
 *** Settings ***
 Library     SeleniumLibrary
 Resource    ../AcademicStructure/Login.robot
-Variables   ../Locators/locators.py
-Variables   ../TestData/TestData.py
 
 *** Variables ***
 ${site_url}     https://sis.medadstg.com
