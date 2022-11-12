@@ -6,6 +6,5 @@ Resource  ../Resources/MedadCMP/AcademicStructure/Login.robot
 
 *** Test Cases ***
 Login with Valid Username & Password
-    User Login                      ${username}              ${password}
-    Wait Until Element Is Visible   ${Home}             timeout=10
-    sleep  1
+    User Login   ${username}   ${password}
+    Wait Until Element Is Visible   ${Success_Login}            timeout=10

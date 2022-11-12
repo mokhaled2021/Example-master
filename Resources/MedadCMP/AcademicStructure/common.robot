@@ -11,7 +11,7 @@ ${browser}      Chrome
 Opening Browser
     [Arguments]  ${site_url}  ${browser}
     Open Browser  ${site_url}  ${browser}
-    Wait Until Element Is Visible  ${Username_field}  timeout=10
+    Wait Until Element Is Visible  ${Username_field}   timeout=10
     Title Should Be  Login
 
 closing Browser

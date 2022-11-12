@@ -1,347 +1,264 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.9.13 on win32)" generated="20221110 14:53:09.592" rpa="false" schemaversion="3">
-<suite id="s1" name="AcademicStructure" source="c:\Users\MKhaled\Downloads\Example-master\Example-master\TestRunner\AcademicStructure.robot">
-<test id="s1-t1" name="Add new Inistitutions" line="10">
+<robot generator="Robot 6.0.1 (Python 3.10.8 on win32)" generated="20221112 14:18:09.588" rpa="false" schemaversion="3">
+<suite id="s1" name="TestRunner" source="C:\Users\MKhaled\Downloads\Example-master\Example-master\TestRunner">
+<suite id="s1-s1" name="AcademicStructure" source="C:\Users\MKhaled\Downloads\Example-master\Example-master\TestRunner\AcademicStructure.robot">
+<test id="s1-s1-t1" name="Add new Inistitutions" line="10">
 <kw name="User Login" library="Login">
 <arg>${username}</arg>
 <arg>${password}</arg>
 <kw name="Opening Browser" library="common">
 <arg>${site_url}${login}</arg>
 <arg>${browser}</arg>
-<kw name="Open Browser" library="SeleniumLibrary">
+<kw name="Open Browser">
 <arg>${site_url}</arg>
 <arg>${browser}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221110 14:53:11.154" level="INFO">Opening browser 'Chrome' to base url 'https://sis.medadstg.com/#login'.</msg>
-<status status="PASS" starttime="20221110 14:53:11.153" endtime="20221110 14:53:18.435"/>
+<msg timestamp="20221112 14:18:09.726" level="FAIL">No keyword with name 'Open Browser' found. Did you mean:
+    common.Opening Browser</msg>
+<status status="FAIL" starttime="20221112 14:18:09.726" endtime="20221112 14:18:09.726"/>
 </kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<kw name="Wait Until Element Is Visible">
 <arg>${Username_field}</arg>
 <arg>timeout=10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20221110 14:53:18.436" endtime="20221110 14:53:18.480"/>
+<status status="NOT RUN" starttime="20221112 14:18:09.731" endtime="20221112 14:18:09.731"/>
 </kw>
-<kw name="Title Should Be" library="SeleniumLibrary">
+<kw name="Title Should Be">
 <arg>Login</arg>
-<doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20221110 14:53:18.487" level="INFO">Page title is 'Login'.</msg>
-<status status="PASS" starttime="20221110 14:53:18.480" endtime="20221110 14:53:18.487"/>
+<status status="NOT RUN" starttime="20221112 14:18:09.733" endtime="20221112 14:18:09.733"/>
 </kw>
-<status status="PASS" starttime="20221110 14:53:11.148" endtime="20221110 14:53:18.488"/>
+<status status="FAIL" starttime="20221112 14:18:09.721" endtime="20221112 14:18:09.733"/>
 </kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20221110 14:53:18.488" endtime="20221110 14:53:18.689"/>
+<kw name="Maximize Browser Window">
+<status status="NOT RUN" starttime="20221112 14:18:09.735" endtime="20221112 14:18:09.735"/>
 </kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<kw name="Wait Until Page Contains Element">
 <arg>${Username_field}</arg>
-<arg>timeout=10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20221110 14:53:18.690" endtime="20221110 14:53:18.734"/>
+<status status="NOT RUN" starttime="20221112 14:18:09.737" endtime="20221112 14:18:09.737"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${Username_field}</arg>
-<arg>${username}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221110 14:53:18.735" level="INFO">Typing text 'mohammed.khaled@naseej.com' into text field '//*[@id='login_email']'.</msg>
-<status status="PASS" starttime="20221110 14:53:18.734" endtime="20221110 14:53:18.889"/>
+<kw name="Enter Username" library="Login">
+<status status="NOT RUN" starttime="20221112 14:18:09.737" endtime="20221112 14:18:09.737"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${password_field}</arg>
-<arg>${password}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221110 14:53:18.891" level="INFO">Typing text 'Medad@123' into text field '//*[@id='login_password']'.</msg>
-<status status="PASS" starttime="20221110 14:53:18.889" endtime="20221110 14:53:19.029"/>
+<kw name="Enter Password" library="Login">
+<status status="NOT RUN" starttime="20221112 14:18:09.737" endtime="20221112 14:18:09.737"/>
 </kw>
-<kw name="Press Keys" library="SeleniumLibrary">
-<arg>${password_field}</arg>
-<arg>ENTER</arg>
-<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20221110 14:53:19.030" level="INFO">Sending key(s) ('ENTER',) to //*[@id='login_password'] element.</msg>
-<msg timestamp="20221110 14:53:19.310" level="INFO">Pressing special key ENTER to element.</msg>
-<msg timestamp="20221110 14:53:19.310" level="INFO">Releasing special key ENTER.</msg>
-<status status="PASS" starttime="20221110 14:53:19.029" endtime="20221110 14:53:19.342"/>
+<kw name=" Click on Login button" library="Login">
+<status status="NOT RUN" starttime="20221112 14:18:09.737" endtime="20221112 14:18:09.737"/>
 </kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${Home}</arg>
-<arg>timeout=10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20221110 14:53:19.343" endtime="20221110 14:53:22.299"/>
+<kw name="Home page is opened Successfully" library="Login">
+<status status="NOT RUN" starttime="20221112 14:18:09.737" endtime="20221112 14:18:09.737"/>
 </kw>
-<status status="PASS" starttime="20221110 14:53:11.142" endtime="20221110 14:53:22.300"/>
+<status status="FAIL" starttime="20221112 14:18:09.720" endtime="20221112 14:18:09.738"/>
 </kw>
 <kw name="Open the AcademicStructure page" library="Inistitutions">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${Academic_Structure}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221110 14:53:22.303" level="INFO">Clicking element '//*[@id='page-Workspaces']/div[2]/div[2]/div/div[3]/div[1]/div/div/div[2]/a[1]'.</msg>
-<status status="PASS" starttime="20221110 14:53:22.302" endtime="20221110 14:53:22.504"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221110 14:53:24.505" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221110 14:53:22.504" endtime="20221110 14:53:24.506"/>
-</kw>
-<status status="PASS" starttime="20221110 14:53:22.301" endtime="20221110 14:53:24.506"/>
+<status status="NOT RUN" starttime="20221112 14:18:09.738" endtime="20221112 14:18:09.739"/>
 </kw>
 <kw name="Open the Institution page" library="Inistitutions">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${Institution}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20221110 14:53:24.510" endtime="20221110 14:53:24.545"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${Institution}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221110 14:53:24.546" level="INFO">Clicking element '//*[@id='page-Workspaces']/div[2]/div[2]/div/div[3]/div[2]/div[1]/div[3]/div[4]/div[2]/div[1]/div[2]/a[1]'.</msg>
-<status status="PASS" starttime="20221110 14:53:24.545" endtime="20221110 14:53:24.616"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221110 14:53:26.625" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221110 14:53:24.618" endtime="20221110 14:53:26.625"/>
-</kw>
-<status status="PASS" starttime="20221110 14:53:24.509" endtime="20221110 14:53:26.626"/>
+<status status="NOT RUN" starttime="20221112 14:18:09.740" endtime="20221112 14:18:09.740"/>
 </kw>
 <kw name="Click button Add new Inistitutions" library="Inistitutions">
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>${Add_Inistitutions}</arg>
-<arg>timeout=10</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20221110 14:53:26.630" endtime="20221110 14:53:26.652"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${Add_Inistitutions}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221110 14:53:26.653" level="INFO">Clicking element '//*[@id='page-List/Institution/List']/div[1]/div/div/div[2]/div[2]/button[2]/span/span'.</msg>
-<status status="PASS" starttime="20221110 14:53:26.652" endtime="20221110 14:53:26.914"/>
-</kw>
-<status status="PASS" starttime="20221110 14:53:26.629" endtime="20221110 14:53:26.915"/>
+<status status="NOT RUN" starttime="20221112 14:18:09.741" endtime="20221112 14:18:09.741"/>
 </kw>
 <kw name="Fill Form of Add Inistitutions" library="Inistitutions">
-<kw name="Fill field Institution Code" library="Inistitutions">
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${Institution_Code_Field}</arg>
-<arg>${Institution_Code}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221110 14:53:26.924" level="INFO">Typing text 'KH1' into text field '//*[@id='page-Institution']/div[2]/div[2]/div/div[3]/div[2]/div[1]/div[2]/div/div/div[3]/div/div/div/form/div[2]/div/div[2]/div[1]/input'.</msg>
-<status status="PASS" starttime="20221110 14:53:26.921" endtime="20221110 14:53:27.203"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221110 14:53:28.208" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20221110 14:53:27.204" endtime="20221110 14:53:28.208"/>
-</kw>
-<status status="PASS" starttime="20221110 14:53:26.920" endtime="20221110 14:53:28.208"/>
-</kw>
-<kw name="Fill field Institution Name" library="Inistitutions">
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${Institution_Name_Field}</arg>
-<arg>${Institution_Name}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221110 14:53:28.210" level="INFO">Typing text 'Khaled' into text field '//*[@id='page-Institution']/div[2]/div[2]/div/div[3]/div[2]/div[1]/div[2]/div/div/div[3]/div/div/div/form/div[3]/div/div[2]/div[1]/input'.</msg>
-<status status="PASS" starttime="20221110 14:53:28.209" endtime="20221110 14:53:28.411"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221110 14:53:29.423" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20221110 14:53:28.411" endtime="20221110 14:53:29.423"/>
-</kw>
-<status status="PASS" starttime="20221110 14:53:28.209" endtime="20221110 14:53:29.424"/>
-</kw>
-<kw name="Select field Institutional Type" library="Inistitutions">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${Institutional_Type_Field}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221110 14:53:29.425" level="INFO">Clicking element '//*[@id='page-Institution']/div[2]/div[2]/div/div[3]/div[2]/div[1]/div[2]/div/div/div[3]/div/div/div/form/div[4]/div/div[2]/div[1]/div/div/input'.</msg>
-<status status="PASS" starttime="20221110 14:53:29.425" endtime="20221110 14:53:29.548"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${Institutional_Type_Selected}</arg>
-<arg>timeout=10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20221110 14:53:29.549" endtime="20221110 14:53:31.361"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${Institutional_Type_Selected}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221110 14:53:31.362" level="INFO">Clicking element '//*[@id='awesomplete_list_4']/li[1]/a/p'.</msg>
-<status status="PASS" starttime="20221110 14:53:31.361" endtime="20221110 14:53:31.480"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221110 14:53:32.488" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20221110 14:53:31.480" endtime="20221110 14:53:32.488"/>
-</kw>
-<status status="PASS" starttime="20221110 14:53:29.424" endtime="20221110 14:53:32.489"/>
-</kw>
-<kw name="Fill field Website" library="Inistitutions">
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${Website_Field}</arg>
-<arg>${Website}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221110 14:53:32.491" level="INFO">Typing text 'http://www.google.com' into text field '//*[@id='page-Institution']/div[2]/div[2]/div/div[3]/div[2]/div[1]/div[2]/div/div/div[3]/div/div/div/form/div[5]/div/div[2]/div[1]/input'.</msg>
-<status status="PASS" starttime="20221110 14:53:32.491" endtime="20221110 14:53:32.739"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221110 14:53:33.748" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20221110 14:53:32.740" endtime="20221110 14:53:33.748"/>
-</kw>
-<status status="PASS" starttime="20221110 14:53:32.489" endtime="20221110 14:53:33.749"/>
-</kw>
-<kw name="Fill field Email" library="Inistitutions">
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${Email_Field}</arg>
-<arg>${Email}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221110 14:53:33.752" level="INFO">Typing text 'test@test.com' into text field '//*[@id='page-Institution']/div[2]/div[2]/div/div[3]/div[2]/div[1]/div[2]/div/div/div[3]/div/div/div/form/div[6]/div/div[2]/div[1]/input'.</msg>
-<status status="PASS" starttime="20221110 14:53:33.751" endtime="20221110 14:53:33.962"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221110 14:53:34.974" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20221110 14:53:33.963" endtime="20221110 14:53:34.974"/>
-</kw>
-<status status="PASS" starttime="20221110 14:53:33.749" endtime="20221110 14:53:34.975"/>
-</kw>
-<kw name="Select field Ownership" library="Inistitutions">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${Ownership_Field}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221110 14:53:34.980" level="INFO">Clicking element '//*[@id='page-Institution']/div[2]/div[2]/div/div[3]/div[2]/div[1]/div[2]/div/div/div[3]/div/div/div/form/div[7]/div/div[2]/div[1]/div/div/input'.</msg>
-<status status="PASS" starttime="20221110 14:53:34.978" endtime="20221110 14:53:35.096"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${Ownership_Selected}</arg>
-<arg>timeout=10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20221110 14:53:35.096" endtime="20221110 14:53:36.663"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${Ownership_Selected}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221110 14:53:36.663" level="INFO">Clicking element '//*[@id='awesomplete_list_5']/li[1]'.</msg>
-<status status="PASS" starttime="20221110 14:53:36.663" endtime="20221110 14:53:36.783"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221110 14:53:37.795" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20221110 14:53:36.783" endtime="20221110 14:53:37.795"/>
-</kw>
-<status status="PASS" starttime="20221110 14:53:34.975" endtime="20221110 14:53:37.796"/>
-</kw>
-<kw name="Fill field Location" library="Inistitutions">
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${Location_Field}</arg>
-<arg>${Location}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221110 14:53:37.800" level="INFO">Typing text 'Tanta' into text field '//*[@id='page-Institution']/div[2]/div[2]/div/div[3]/div[2]/div[1]/div[2]/div/div/div[3]/div/div/div/form/div[8]/div/div[2]/div[1]/input'.</msg>
-<status status="PASS" starttime="20221110 14:53:37.797" endtime="20221110 14:53:37.975"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221110 14:53:38.986" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20221110 14:53:37.975" endtime="20221110 14:53:38.987"/>
-</kw>
-<status status="PASS" starttime="20221110 14:53:37.796" endtime="20221110 14:53:38.988"/>
-</kw>
-<kw name="Fill field MOE Number" library="Inistitutions">
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${MOE_Number_Field}</arg>
-<arg>${MOE_Number}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221110 14:53:38.989" level="INFO">Typing text '15' into text field '//*[@id='page-Institution']/div[2]/div[2]/div/div[3]/div[2]/div[1]/div[2]/div/div/div[3]/div/div/div/form/div[9]/div/div[2]/div[1]/input'.</msg>
-<status status="PASS" starttime="20221110 14:53:38.988" endtime="20221110 14:53:39.188"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221110 14:53:40.194" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20221110 14:53:39.189" endtime="20221110 14:53:40.194"/>
-</kw>
-<status status="PASS" starttime="20221110 14:53:38.988" endtime="20221110 14:53:40.195"/>
-</kw>
-<kw name="Select field Time Zone" library="Inistitutions">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${Time_Zone_Field}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221110 14:53:40.198" level="INFO">Clicking element '//*[@id='page-Institution']/div[2]/div[2]/div/div[3]/div[2]/div[1]/div[2]/div/div/div[3]/div/div/div/form/div[10]/div/div[2]/div[1]/select'.</msg>
-<status status="PASS" starttime="20221110 14:53:40.196" endtime="20221110 14:53:40.333"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${Time_Zone_Selected}</arg>
-<arg>timeout=10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20221110 14:53:40.334" endtime="20221110 14:53:40.372"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${Time_Zone_Selected}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221110 14:53:40.372" level="INFO">Clicking element '//*[@id='page-Institution']/div[2]/div[2]/div/div[3]/div[2]/div[1]/div[2]/div/div/div[3]/div/div/div/form/div[10]/div/div[2]/div[1]/select/option[1]'.</msg>
-<status status="PASS" starttime="20221110 14:53:40.372" endtime="20221110 14:53:40.467"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221110 14:53:41.484" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20221110 14:53:40.469" endtime="20221110 14:53:41.484"/>
-</kw>
-<status status="PASS" starttime="20221110 14:53:40.195" endtime="20221110 14:53:41.485"/>
-</kw>
-<status status="PASS" starttime="20221110 14:53:26.919" endtime="20221110 14:53:41.485"/>
+<status status="NOT RUN" starttime="20221112 14:18:09.743" endtime="20221112 14:18:09.743"/>
 </kw>
 <kw name="click submit button" library="Inistitutions">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${Submit_Button}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221110 14:53:41.490" level="INFO">Clicking element '//*[@id='page-Institution']/div[1]/div/div/div[2]/div[3]/button[2]'.</msg>
-<status status="PASS" starttime="20221110 14:53:41.489" endtime="20221110 14:53:41.622"/>
-</kw>
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>${Successfully_Saved}</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20221110 14:53:41.623" endtime="20221110 14:53:42.733"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221110 14:53:44.740" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221110 14:53:42.733" endtime="20221110 14:53:44.742"/>
-</kw>
-<status status="PASS" starttime="20221110 14:53:41.488" endtime="20221110 14:53:44.742"/>
+<status status="NOT RUN" starttime="20221112 14:18:09.744" endtime="20221112 14:18:09.744"/>
 </kw>
 <kw name="closing Browser" library="common" type="TEARDOWN">
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20221110 14:53:44.746" endtime="20221110 14:53:47.796"/>
+<kw name="close Browser">
+<msg timestamp="20221112 14:18:09.747" level="FAIL">No keyword with name 'close Browser' found.</msg>
+<status status="FAIL" starttime="20221112 14:18:09.747" endtime="20221112 14:18:09.747"/>
 </kw>
-<status status="PASS" starttime="20221110 14:53:44.745" endtime="20221110 14:53:47.797"/>
+<status status="FAIL" starttime="20221112 14:18:09.745" endtime="20221112 14:18:09.748">No keyword with name 'close Browser' found.</status>
 </kw>
-<status status="PASS" starttime="20221110 14:53:11.120" endtime="20221110 14:53:47.800"/>
+<status status="FAIL" starttime="20221112 14:18:09.719" endtime="20221112 14:18:09.748">No keyword with name 'Open Browser' found. Did you mean:
+    common.Opening Browser
+
+Also teardown failed:
+No keyword with name 'close Browser' found.</status>
 </test>
 <doc>MedadCMP LoginPage</doc>
-<status status="PASS" starttime="20221110 14:53:09.652" endtime="20221110 14:53:47.809"/>
+<status status="FAIL" starttime="20221112 14:18:09.654" endtime="20221112 14:18:09.751"/>
+</suite>
+<suite id="s1-s2" name="Login" source="C:\Users\MKhaled\Downloads\Example-master\Example-master\TestRunner\Login.robot">
+<test id="s1-s2-t1" name="Login with Valid Username &amp; Password" line="8">
+<kw name="User Login" library="Login">
+<arg>${username}</arg>
+<arg>${password}</arg>
+<kw name="Opening Browser" library="common">
+<arg>${site_url}${login}</arg>
+<arg>${browser}</arg>
+<kw name="Open Browser">
+<arg>${site_url}</arg>
+<arg>${browser}</arg>
+<msg timestamp="20221112 14:18:09.814" level="FAIL">No keyword with name 'Open Browser' found. Did you mean:
+    common.Opening Browser</msg>
+<status status="FAIL" starttime="20221112 14:18:09.814" endtime="20221112 14:18:09.814"/>
+</kw>
+<kw name="Wait Until Element Is Visible">
+<arg>${Username_field}</arg>
+<arg>timeout=10</arg>
+<status status="NOT RUN" starttime="20221112 14:18:09.816" endtime="20221112 14:18:09.816"/>
+</kw>
+<kw name="Title Should Be">
+<arg>Login</arg>
+<status status="NOT RUN" starttime="20221112 14:18:09.818" endtime="20221112 14:18:09.818"/>
+</kw>
+<status status="FAIL" starttime="20221112 14:18:09.811" endtime="20221112 14:18:09.818"/>
+</kw>
+<kw name="Maximize Browser Window">
+<status status="NOT RUN" starttime="20221112 14:18:09.820" endtime="20221112 14:18:09.820"/>
+</kw>
+<kw name="Wait Until Page Contains Element">
+<arg>${Username_field}</arg>
+<status status="NOT RUN" starttime="20221112 14:18:09.821" endtime="20221112 14:18:09.821"/>
+</kw>
+<kw name="Enter Username" library="Login">
+<status status="NOT RUN" starttime="20221112 14:18:09.821" endtime="20221112 14:18:09.823"/>
+</kw>
+<kw name="Enter Password" library="Login">
+<status status="NOT RUN" starttime="20221112 14:18:09.824" endtime="20221112 14:18:09.824"/>
+</kw>
+<kw name=" Click on Login button" library="Login">
+<status status="NOT RUN" starttime="20221112 14:18:09.824" endtime="20221112 14:18:09.824"/>
+</kw>
+<kw name="Home page is opened Successfully" library="Login">
+<status status="NOT RUN" starttime="20221112 14:18:09.825" endtime="20221112 14:18:09.825"/>
+</kw>
+<status status="FAIL" starttime="20221112 14:18:09.811" endtime="20221112 14:18:09.825"/>
+</kw>
+<kw name="Wait Until Element Is Visible">
+<arg>${Success_Login}</arg>
+<arg>timeout=10</arg>
+<status status="NOT RUN" starttime="20221112 14:18:09.831" endtime="20221112 14:18:09.831"/>
+</kw>
+<status status="FAIL" starttime="20221112 14:18:09.809" endtime="20221112 14:18:09.832">No keyword with name 'Open Browser' found. Did you mean:
+    common.Opening Browser</status>
+</test>
+<doc>MedadCMP LoginPage</doc>
+<status status="FAIL" starttime="20221112 14:18:09.754" endtime="20221112 14:18:09.835"/>
+</suite>
+<status status="FAIL" starttime="20221112 14:18:09.610" endtime="20221112 14:18:09.842"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="AcademicStructure">AcademicStructure</stat>
+<stat pass="0" fail="2" skip="0" id="s1" name="TestRunner">TestRunner</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="AcademicStructure">TestRunner.AcademicStructure</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s2" name="Login">TestRunner.Login</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20221112 14:18:09.588" level="ERROR">Taking listener 'allure_robotframework' into use failed: Importing listener 'allure_robotframework' failed: ModuleNotFoundError: No module named 'allure_robotframework'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\MKhaled\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\Scripts\robot.exe
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2288.0_x64__qbz5n2kfra8p0\python310.zip
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2288.0_x64__qbz5n2kfra8p0\DLLs
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2288.0_x64__qbz5n2kfra8p0\lib
+  C:\Users\MKhaled\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0
+  C:\Users\MKhaled\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2288.0_x64__qbz5n2kfra8p0
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2288.0_x64__qbz5n2kfra8p0\lib\site-packages</msg>
+<msg timestamp="20221112 14:18:09.665" level="ERROR">Error in file 'C:\Users\MKhaled\Downloads\Example-master\Example-master\TestRunner\AcademicStructure.robot' on line 3: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\MKhaled\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\Scripts\robot.exe
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2288.0_x64__qbz5n2kfra8p0\python310.zip
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2288.0_x64__qbz5n2kfra8p0\DLLs
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2288.0_x64__qbz5n2kfra8p0\lib
+  C:\Users\MKhaled\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0
+  C:\Users\MKhaled\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2288.0_x64__qbz5n2kfra8p0
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2288.0_x64__qbz5n2kfra8p0\lib\site-packages</msg>
+<msg timestamp="20221112 14:18:09.678" level="ERROR">Error in file 'C:\Users\MKhaled\Downloads\Example-master\Example-master\Resources\MedadCMP\AcademicStructure\Login.robot' on line 2: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\MKhaled\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\Scripts\robot.exe
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2288.0_x64__qbz5n2kfra8p0\python310.zip
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2288.0_x64__qbz5n2kfra8p0\DLLs
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2288.0_x64__qbz5n2kfra8p0\lib
+  C:\Users\MKhaled\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0
+  C:\Users\MKhaled\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2288.0_x64__qbz5n2kfra8p0
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2288.0_x64__qbz5n2kfra8p0\lib\site-packages</msg>
+<msg timestamp="20221112 14:18:09.688" level="ERROR">Error in file 'C:\Users\MKhaled\Downloads\Example-master\Example-master\Resources\MedadCMP\AcademicStructure\common.robot' on line 2: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\MKhaled\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\Scripts\robot.exe
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2288.0_x64__qbz5n2kfra8p0\python310.zip
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2288.0_x64__qbz5n2kfra8p0\DLLs
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2288.0_x64__qbz5n2kfra8p0\lib
+  C:\Users\MKhaled\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0
+  C:\Users\MKhaled\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2288.0_x64__qbz5n2kfra8p0
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2288.0_x64__qbz5n2kfra8p0\lib\site-packages</msg>
+<msg timestamp="20221112 14:18:09.705" level="ERROR">Error in file 'C:\Users\MKhaled\Downloads\Example-master\Example-master\Resources\MedadCMP\AcademicStructure\Inistitutions.robot' on line 2: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\MKhaled\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\Scripts\robot.exe
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2288.0_x64__qbz5n2kfra8p0\python310.zip
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2288.0_x64__qbz5n2kfra8p0\DLLs
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2288.0_x64__qbz5n2kfra8p0\lib
+  C:\Users\MKhaled\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0
+  C:\Users\MKhaled\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2288.0_x64__qbz5n2kfra8p0
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2288.0_x64__qbz5n2kfra8p0\lib\site-packages</msg>
+<msg timestamp="20221112 14:18:09.765" level="ERROR">Error in file 'C:\Users\MKhaled\Downloads\Example-master\Example-master\TestRunner\Login.robot' on line 3: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\MKhaled\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\Scripts\robot.exe
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2288.0_x64__qbz5n2kfra8p0\python310.zip
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2288.0_x64__qbz5n2kfra8p0\DLLs
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2288.0_x64__qbz5n2kfra8p0\lib
+  C:\Users\MKhaled\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0
+  C:\Users\MKhaled\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2288.0_x64__qbz5n2kfra8p0
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2288.0_x64__qbz5n2kfra8p0\lib\site-packages</msg>
+<msg timestamp="20221112 14:18:09.774" level="ERROR">Error in file 'C:\Users\MKhaled\Downloads\Example-master\Example-master\Resources\MedadCMP\AcademicStructure\Login.robot' on line 2: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\MKhaled\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\Scripts\robot.exe
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2288.0_x64__qbz5n2kfra8p0\python310.zip
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2288.0_x64__qbz5n2kfra8p0\DLLs
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2288.0_x64__qbz5n2kfra8p0\lib
+  C:\Users\MKhaled\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0
+  C:\Users\MKhaled\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2288.0_x64__qbz5n2kfra8p0
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2288.0_x64__qbz5n2kfra8p0\lib\site-packages</msg>
+<msg timestamp="20221112 14:18:09.784" level="ERROR">Error in file 'C:\Users\MKhaled\Downloads\Example-master\Example-master\Resources\MedadCMP\AcademicStructure\common.robot' on line 2: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\MKhaled\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\Scripts\robot.exe
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2288.0_x64__qbz5n2kfra8p0\python310.zip
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2288.0_x64__qbz5n2kfra8p0\DLLs
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2288.0_x64__qbz5n2kfra8p0\lib
+  C:\Users\MKhaled\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0
+  C:\Users\MKhaled\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2288.0_x64__qbz5n2kfra8p0
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2288.0_x64__qbz5n2kfra8p0\lib\site-packages</msg>
+<msg timestamp="20221112 14:18:09.797" level="ERROR">Error in file 'C:\Users\MKhaled\Downloads\Example-master\Example-master\Resources\MedadCMP\AcademicStructure\Inistitutions.robot' on line 2: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\MKhaled\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\Scripts\robot.exe
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2288.0_x64__qbz5n2kfra8p0\python310.zip
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2288.0_x64__qbz5n2kfra8p0\DLLs
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2288.0_x64__qbz5n2kfra8p0\lib
+  C:\Users\MKhaled\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0
+  C:\Users\MKhaled\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2288.0_x64__qbz5n2kfra8p0
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2288.0_x64__qbz5n2kfra8p0\lib\site-packages</msg>
 </errors>
 </robot>
