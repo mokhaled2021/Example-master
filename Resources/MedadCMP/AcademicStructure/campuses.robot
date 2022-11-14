@@ -14,9 +14,11 @@ Open the Cumpuses page
 Click button Add new campuses
     Wait Until Page Contains Element     ${Add_Campuses}     timeout=10
     Click Element  ${Add_Campuses}
-    sleep   3
+
 Fill field Campus Name
-    Input Text Into Alert   ${Campus_name_field}    ${Campus_name}
+    Wait Until Element Is Visible    /html/body/div[11]   timeout=10
+    Wait Until Element Is Enabled    /html/body/div[11]   timeout=10
+    Input Text   ${Campus_name_field}  ${Campus_name}
 Fill field Campus Code
     Input Text Into Alert    ${campus_code_field}    ${Campus_code}
 Fill field campus Location
