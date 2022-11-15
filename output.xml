@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.9.13 on win32)" generated="20221113 12:41:57.739" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.9.13 on win32)" generated="20221115 14:08:49.098" rpa="false" schemaversion="3">
 <suite id="s1" name="AcademicStructure" source="c:\Users\MKhaled\Downloads\Example-master\Example-master\TestRunner\AcademicStructure.robot">
-<test id="s1-t1" name="TC3 : Add new Campuses" line="15">
-<kw name="Add new Campuses" library="common">
+<test id="s1-t1" name="TC1 : Add new Inistitutions" line="11">
+<kw name="Add new Inistitutions" library="common">
 <kw name="Open the AcademicStructure page" library="common">
 <kw name="User Login" library="Login">
 <arg>${username}</arg>
@@ -14,159 +14,272 @@
 <arg>${site_url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221113 12:41:58.532" level="INFO">Opening browser 'Chrome' to base url 'https://sis.medadstg.com/#login'.</msg>
-<status status="PASS" starttime="20221113 12:41:58.532" endtime="20221113 12:42:06.122"/>
+<msg timestamp="20221115 14:08:49.879" level="INFO">Opening browser 'Chrome' to base url 'https://sis.medadstg.com/#login'.</msg>
+<status status="PASS" starttime="20221115 14:08:49.878" endtime="20221115 14:09:01.292"/>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <arg>${Username_field}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20221113 12:42:06.122" endtime="20221113 12:42:06.144"/>
+<status status="PASS" starttime="20221115 14:09:01.293" endtime="20221115 14:09:01.316"/>
 </kw>
-<status status="PASS" starttime="20221113 12:41:58.532" endtime="20221113 12:42:06.144"/>
+<status status="PASS" starttime="20221115 14:08:49.877" endtime="20221115 14:09:01.317"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20221113 12:42:06.144" endtime="20221113 12:42:06.283"/>
+<status status="PASS" starttime="20221115 14:09:01.317" endtime="20221115 14:09:01.466"/>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <arg>${Username_field}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20221113 12:42:06.284" endtime="20221113 12:42:06.294"/>
+<status status="PASS" starttime="20221115 14:09:01.467" endtime="20221115 14:09:01.484"/>
 </kw>
 <kw name="Enter Username" library="Login">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${Username_field}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221113 12:42:06.295" level="INFO">Typing text 'mohammed.khaled@naseej.com' into text field '//input[@id='login_email']'.</msg>
-<status status="PASS" starttime="20221113 12:42:06.295" endtime="20221113 12:42:06.524"/>
+<msg timestamp="20221115 14:09:01.486" level="INFO">Typing text 'mohammed.khaled@naseej.com' into text field '//input[@id='login_email']'.</msg>
+<status status="PASS" starttime="20221115 14:09:01.484" endtime="20221115 14:09:01.768"/>
 </kw>
-<status status="PASS" starttime="20221113 12:42:06.295" endtime="20221113 12:42:06.525"/>
+<status status="PASS" starttime="20221115 14:09:01.484" endtime="20221115 14:09:01.768"/>
 </kw>
 <kw name="Enter Password" library="Login">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${password_field}</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221113 12:42:06.526" level="INFO">Typing text 'Medad@123' into text field '//input[@id='login_password']'.</msg>
-<status status="PASS" starttime="20221113 12:42:06.525" endtime="20221113 12:42:06.668"/>
+<msg timestamp="20221115 14:09:01.772" level="INFO">Typing text 'Medad@123' into text field '//input[@id='login_password']'.</msg>
+<status status="PASS" starttime="20221115 14:09:01.769" endtime="20221115 14:09:01.900"/>
 </kw>
-<status status="PASS" starttime="20221113 12:42:06.525" endtime="20221113 12:42:06.669"/>
+<status status="PASS" starttime="20221115 14:09:01.769" endtime="20221115 14:09:01.901"/>
 </kw>
 <kw name=" Click on Login button" library="Login">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${Login_Button}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221113 12:42:06.670" level="INFO">Clicking element '//button[@type='submit']'.</msg>
-<status status="PASS" starttime="20221113 12:42:06.670" endtime="20221113 12:42:06.740"/>
+<msg timestamp="20221115 14:09:01.904" level="INFO">Clicking element '//button[@type='submit']'.</msg>
+<status status="PASS" starttime="20221115 14:09:01.902" endtime="20221115 14:09:01.990"/>
 </kw>
-<status status="PASS" starttime="20221113 12:42:06.669" endtime="20221113 12:42:06.741"/>
+<status status="PASS" starttime="20221115 14:09:01.902" endtime="20221115 14:09:01.990"/>
 </kw>
 <kw name="Home page is opened Successfully" library="Login">
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <arg>${Success_Login}</arg>
 <arg>timeout=10</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20221113 12:42:06.741" endtime="20221113 12:42:09.505"/>
+<status status="PASS" starttime="20221115 14:09:01.991" endtime="20221115 14:09:07.064"/>
 </kw>
-<status status="PASS" starttime="20221113 12:42:06.741" endtime="20221113 12:42:09.505"/>
+<status status="PASS" starttime="20221115 14:09:01.991" endtime="20221115 14:09:07.064"/>
 </kw>
-<status status="PASS" starttime="20221113 12:41:58.532" endtime="20221113 12:42:09.506"/>
+<status status="PASS" starttime="20221115 14:08:49.877" endtime="20221115 14:09:07.065"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${Academic_Structure}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221113 12:42:09.508" level="INFO">Clicking element '//a[@href='/app/academic-structure']'.</msg>
-<status status="PASS" starttime="20221113 12:42:09.507" endtime="20221113 12:42:09.589"/>
+<msg timestamp="20221115 14:09:07.066" level="INFO">Clicking element '//a[@href='/app/academic-structure']'.</msg>
+<status status="PASS" starttime="20221115 14:09:07.066" endtime="20221115 14:09:07.179"/>
 </kw>
-<status status="PASS" starttime="20221113 12:41:58.531" endtime="20221113 12:42:09.589"/>
+<status status="PASS" starttime="20221115 14:08:49.876" endtime="20221115 14:09:07.179"/>
 </kw>
-<kw name="Open the Cumpuses page" library="campuses">
+<kw name="Open the Institution page" library="Inistitutions">
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>${Campuses_Link}</arg>
+<arg>${Institution_Link}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20221113 12:42:09.589" endtime="20221113 12:42:10.109"/>
+<status status="PASS" starttime="20221115 14:09:07.181" endtime="20221115 14:09:07.666"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${Campuses_Link}</arg>
+<arg>${Institution_Link}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221113 12:42:10.109" level="INFO">Clicking element '//a[@href='/app/campus']'.</msg>
-<status status="PASS" starttime="20221113 12:42:10.109" endtime="20221113 12:42:10.177"/>
+<msg timestamp="20221115 14:09:07.672" level="INFO">Clicking element '//a[@href='/app/institution']'.</msg>
+<status status="PASS" starttime="20221115 14:09:07.667" endtime="20221115 14:09:07.795"/>
 </kw>
-<status status="PASS" starttime="20221113 12:42:09.589" endtime="20221113 12:42:10.178"/>
+<status status="PASS" starttime="20221115 14:09:07.180" endtime="20221115 14:09:07.796"/>
 </kw>
-<kw name="Click button Add new campuses" library="campuses">
+<kw name="Click button Add new Inistitutions" library="Inistitutions">
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>${Add_Campuses}</arg>
-<arg>timeout=10</arg>
+<arg>${Add_Inistitutions}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20221113 12:42:10.179" endtime="20221113 12:42:10.940"/>
+<status status="PASS" starttime="20221115 14:09:07.798" endtime="20221115 14:09:08.976"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${Add_Campuses}</arg>
+<arg>${Add_Inistitutions}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221113 12:42:10.942" level="INFO">Clicking element '//span[@data-label='Add%20Campus']'.</msg>
-<status status="PASS" starttime="20221113 12:42:10.941" endtime="20221113 12:42:11.015"/>
+<msg timestamp="20221115 14:09:08.977" level="INFO">Clicking element '//span[@data-label='Add%20Institution']'.</msg>
+<status status="PASS" starttime="20221115 14:09:08.976" endtime="20221115 14:09:09.373"/>
 </kw>
-<status status="PASS" starttime="20221113 12:42:10.179" endtime="20221113 12:42:11.017"/>
+<status status="PASS" starttime="20221115 14:09:07.796" endtime="20221115 14:09:09.374"/>
 </kw>
-<kw name="Fill Form of Add campuses" library="campuses">
-<kw name="Fill field Campus Name" library="campuses">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>/html/body/div[11]</arg>
-<arg>timeout=10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<msg timestamp="20221113 12:42:21.515" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20221113 12:42:21.517" level="FAIL">Element '/html/body/div[11]' not visible after 10 seconds.</msg>
-<status status="FAIL" starttime="20221113 12:42:11.020" endtime="20221113 12:42:21.525"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>/html/body/div[11]</arg>
-<arg>timeout=10</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="NOT RUN" starttime="20221113 12:42:21.525" endtime="20221113 12:42:21.525"/>
-</kw>
+<kw name="Fill Form of Add Inistitutions" library="Inistitutions">
+<kw name="Fill field Institution Code" library="Inistitutions">
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>${Campus_name_field}</arg>
-<arg>${Campus_name}</arg>
+<arg>${Institution_Code_Field}</arg>
+<arg>${Institution_Code}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20221113 12:42:21.525" endtime="20221113 12:42:21.525"/>
+<msg timestamp="20221115 14:09:09.377" level="INFO">Typing text 'KH-01' into text field '//input[@data-fieldname='institution_code']'.</msg>
+<status status="PASS" starttime="20221115 14:09:09.376" endtime="20221115 14:09:09.592"/>
 </kw>
-<status status="FAIL" starttime="20221113 12:42:11.019" endtime="20221113 12:42:21.533"/>
+<status status="PASS" starttime="20221115 14:09:09.375" endtime="20221115 14:09:09.593"/>
 </kw>
-<kw name="Fill field Campus Code" library="campuses">
-<status status="NOT RUN" starttime="20221113 12:42:21.533" endtime="20221113 12:42:21.533"/>
+<kw name="Fill field Institution Name" library="Inistitutions">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Institution_Name_Field}</arg>
+<arg>${Institution_Name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221115 14:09:09.595" level="INFO">Typing text 'MKhaled' into text field '//input[@data-fieldname='institution_name']'.</msg>
+<status status="PASS" starttime="20221115 14:09:09.594" endtime="20221115 14:09:09.789"/>
 </kw>
-<kw name="Fill field campus Location" library="campuses">
-<status status="NOT RUN" starttime="20221113 12:42:21.533" endtime="20221113 12:42:21.533"/>
+<status status="PASS" starttime="20221115 14:09:09.594" endtime="20221115 14:09:09.790"/>
 </kw>
-<status status="FAIL" starttime="20221113 12:42:11.018" endtime="20221113 12:42:21.533"/>
+<kw name="Select field Institutional Type" library="Inistitutions">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Institutional_Type_Field}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221115 14:09:09.791" level="INFO">Clicking element '//input[@data-fieldname='institutional_type']'.</msg>
+<status status="PASS" starttime="20221115 14:09:09.790" endtime="20221115 14:09:09.897"/>
 </kw>
-<kw name="click submit Campus" library="campuses">
-<status status="NOT RUN" starttime="20221113 12:42:21.533" endtime="20221113 12:42:21.533"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221115 14:09:11.907" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221115 14:09:09.898" endtime="20221115 14:09:11.907"/>
 </kw>
-<status status="FAIL" starttime="20221113 12:41:58.531" endtime="20221113 12:42:21.543"/>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Institutional_Type_Selected}</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221115 14:09:11.908" endtime="20221115 14:09:11.925"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Institutional_Type_Selected}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221115 14:09:11.927" level="INFO">Clicking element '//ul[@id='awesomplete_list_4']/li[1]'.</msg>
+<status status="PASS" starttime="20221115 14:09:11.926" endtime="20221115 14:09:11.998"/>
+</kw>
+<status status="PASS" starttime="20221115 14:09:09.790" endtime="20221115 14:09:11.999"/>
+</kw>
+<kw name="Fill field Website" library="Inistitutions">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Website_Field}</arg>
+<arg>${Website}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221115 14:09:12.003" level="INFO">Typing text 'http://www.google.com' into text field '//input[@data-fieldname='website']'.</msg>
+<status status="PASS" starttime="20221115 14:09:12.000" endtime="20221115 14:09:12.233"/>
+</kw>
+<status status="PASS" starttime="20221115 14:09:11.999" endtime="20221115 14:09:12.233"/>
+</kw>
+<kw name="Fill field Email" library="Inistitutions">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Email_Field}</arg>
+<arg>${Email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221115 14:09:12.237" level="INFO">Typing text 'test@test.com' into text field '//input[@data-fieldname='email']'.</msg>
+<status status="PASS" starttime="20221115 14:09:12.235" endtime="20221115 14:09:12.451"/>
+</kw>
+<status status="PASS" starttime="20221115 14:09:12.233" endtime="20221115 14:09:12.452"/>
+</kw>
+<kw name="Select field Ownership" library="Inistitutions">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Ownership_Field}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221115 14:09:12.454" level="INFO">Clicking element '//input[@data-fieldname='ownership']'.</msg>
+<status status="PASS" starttime="20221115 14:09:12.453" endtime="20221115 14:09:12.548"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Ownership_Selected}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221115 14:09:12.549" endtime="20221115 14:09:13.882"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Ownership_Selected}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221115 14:09:13.884" level="INFO">Clicking element '//ul[@id='awesomplete_list_5']/li[1]'.</msg>
+<status status="PASS" starttime="20221115 14:09:13.883" endtime="20221115 14:09:13.953"/>
+</kw>
+<status status="PASS" starttime="20221115 14:09:12.453" endtime="20221115 14:09:13.954"/>
+</kw>
+<kw name="Fill field Institution Location" library="Inistitutions">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Location_Field}</arg>
+<arg>${Location}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221115 14:09:13.956" level="INFO">Typing text 'Tanta' into text field '//input[@data-fieldname='location'][@data-doctype='Institution']'.</msg>
+<status status="PASS" starttime="20221115 14:09:13.955" endtime="20221115 14:09:14.194"/>
+</kw>
+<status status="PASS" starttime="20221115 14:09:13.954" endtime="20221115 14:09:14.195"/>
+</kw>
+<kw name="Fill field MOE Number" library="Inistitutions">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${MOE_Number_Field}</arg>
+<arg>${MOE_Number}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221115 14:09:14.197" level="INFO">Typing text '15' into text field '//input[@data-fieldname='moe_number']'.</msg>
+<status status="PASS" starttime="20221115 14:09:14.196" endtime="20221115 14:09:14.377"/>
+</kw>
+<status status="PASS" starttime="20221115 14:09:14.195" endtime="20221115 14:09:14.377"/>
+</kw>
+<kw name="Select field Time Zone" library="Inistitutions">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Time_Zone_Field}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221115 14:09:14.380" level="INFO">Clicking element '//select[@data-fieldname='time_zone']'.</msg>
+<status status="PASS" starttime="20221115 14:09:14.379" endtime="20221115 14:09:14.537"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Time_Zone_Selected}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221115 14:09:14.538" endtime="20221115 14:09:14.561"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Time_Zone_Selected}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221115 14:09:14.563" level="INFO">Clicking element '//select[@data-fieldname='time_zone']/option[1]'.</msg>
+<status status="PASS" starttime="20221115 14:09:14.562" endtime="20221115 14:09:14.673"/>
+</kw>
+<status status="PASS" starttime="20221115 14:09:14.378" endtime="20221115 14:09:14.673"/>
+</kw>
+<status status="PASS" starttime="20221115 14:09:09.375" endtime="20221115 14:09:14.674"/>
+</kw>
+<kw name="click submit Institution Button" library="Inistitutions">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Submit_Institution}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221115 14:09:14.676" endtime="20221115 14:09:14.693"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Submit_Institution}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221115 14:09:14.694" level="INFO">Clicking element '//button[@data-label='Save']'.</msg>
+<status status="PASS" starttime="20221115 14:09:14.693" endtime="20221115 14:09:14.794"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Successfully_Saved}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221115 14:09:14.794" endtime="20221115 14:09:15.695"/>
+</kw>
+<status status="PASS" starttime="20221115 14:09:14.675" endtime="20221115 14:09:15.696"/>
+</kw>
+<status status="PASS" starttime="20221115 14:08:49.876" endtime="20221115 14:09:15.696"/>
 </kw>
 <kw name="closing Browser" library="common" type="TEARDOWN">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20221113 12:42:21.549" endtime="20221113 12:42:23.963"/>
+<status status="PASS" starttime="20221115 14:09:15.698" endtime="20221115 14:09:18.344"/>
 </kw>
-<status status="PASS" starttime="20221113 12:42:21.543" endtime="20221113 12:42:23.968"/>
+<status status="PASS" starttime="20221115 14:09:15.697" endtime="20221115 14:09:18.345"/>
 </kw>
-<status status="FAIL" starttime="20221113 12:41:58.529" endtime="20221113 12:42:23.972">Element '/html/body/div[11]' not visible after 10 seconds.</status>
+<status status="PASS" starttime="20221115 14:08:49.874" endtime="20221115 14:09:18.347"/>
 </test>
 <doc>MedadCMP LoginPage</doc>
-<status status="FAIL" starttime="20221113 12:41:57.756" endtime="20221113 12:42:23.986"/>
+<status status="PASS" starttime="20221115 14:08:49.115" endtime="20221115 14:09:18.360"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="AcademicStructure">AcademicStructure</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="AcademicStructure">AcademicStructure</stat>
 </suite>
 </statistics>
 <errors>
