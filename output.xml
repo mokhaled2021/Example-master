@@ -1,276 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.9.13 on win32)" generated="20221115 14:08:49.098" rpa="false" schemaversion="3">
-<suite id="s1" name="AcademicStructure" source="c:\Users\MKhaled\Downloads\Example-master\Example-master\TestRunner\AcademicStructure.robot">
-<test id="s1-t1" name="TC1 : Add new Inistitutions" line="11">
-<kw name="Add new Inistitutions" library="common">
-<kw name="Open the AcademicStructure page" library="common">
-<kw name="User Login" library="Login">
-<arg>${username}</arg>
-<arg>${password}</arg>
-<kw name="Opening Browser" library="common">
-<arg>${site_url}${login}</arg>
-<arg>${browser}</arg>
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>${site_url}</arg>
-<arg>${browser}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221115 14:08:49.879" level="INFO">Opening browser 'Chrome' to base url 'https://sis.medadstg.com/#login'.</msg>
-<status status="PASS" starttime="20221115 14:08:49.878" endtime="20221115 14:09:01.292"/>
+<robot generator="Robot 5.0.1 (Python 3.9.13 on win32)" generated="20221115 16:49:13.679" rpa="false" schemaversion="3">
+<suite id="s1" name="Login" source="c:\Users\MKhaled\Downloads\Example-master\Example-master\TestRunner\Login.robot">
+<test id="s1-t1" name="Etevdg gf gf" line="12">
+<kw name="Read Excle" library="campuses">
+<kw name="Get File" library="OperatingSystem">
+<var>${csv}</var>
+<arg>testdata.csv</arg>
+<doc>Returns the contents of a specified file.</doc>
+<msg timestamp="20221115 16:49:16.100" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\MKhaled\Downloads\Example-master\Example-master\testdata.csv"&gt;C:\Users\MKhaled\Downloads\Example-master\Example-master\testdata.csv&lt;/a&gt;'.</msg>
+<msg timestamp="20221115 16:49:16.104" level="INFO">${csv} = ﻿${username},${password}
+mohammed.khaled@naseej.com,Medad@123
+</msg>
+<status status="PASS" starttime="20221115 16:49:16.099" endtime="20221115 16:49:16.104"/>
 </kw>
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>${Username_field}</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20221115 14:09:01.293" endtime="20221115 14:09:01.316"/>
+<kw name="Create List" library="BuiltIn">
+<var>${read}</var>
+<arg>${csv}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20221115 16:49:16.105" level="INFO">${read} = ['\ufeff${username},${password}\nmohammed.khaled@naseej.com,Medad@123\n']</msg>
+<status status="PASS" starttime="20221115 16:49:16.105" endtime="20221115 16:49:16.105"/>
 </kw>
-<status status="PASS" starttime="20221115 14:08:49.877" endtime="20221115 14:09:01.317"/>
+<for flavor="IN">
+<var>${line}</var>
+<value>@{read}</value>
+<iter>
+<var name="${line}">﻿${username},${password}
+mohammed.khaled@naseej.com,Medad@123
+</var>
+<kw name="Log" library="BuiltIn">
+<arg>${line}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20221115 16:49:16.107" level="INFO">﻿${username},${password}
+mohammed.khaled@naseej.com,Medad@123
+</msg>
+<status status="PASS" starttime="20221115 16:49:16.107" endtime="20221115 16:49:16.108"/>
 </kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20221115 14:09:01.317" endtime="20221115 14:09:01.466"/>
+<status status="PASS" starttime="20221115 16:49:16.106" endtime="20221115 16:49:16.108"/>
+</iter>
+<status status="PASS" starttime="20221115 16:49:16.106" endtime="20221115 16:49:16.109"/>
+</for>
+<status status="PASS" starttime="20221115 16:49:16.099" endtime="20221115 16:49:16.110"/>
 </kw>
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>${Username_field}</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20221115 14:09:01.467" endtime="20221115 14:09:01.484"/>
-</kw>
-<kw name="Enter Username" library="Login">
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${Username_field}</arg>
-<arg>${username}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221115 14:09:01.486" level="INFO">Typing text 'mohammed.khaled@naseej.com' into text field '//input[@id='login_email']'.</msg>
-<status status="PASS" starttime="20221115 14:09:01.484" endtime="20221115 14:09:01.768"/>
-</kw>
-<status status="PASS" starttime="20221115 14:09:01.484" endtime="20221115 14:09:01.768"/>
-</kw>
-<kw name="Enter Password" library="Login">
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${password_field}</arg>
-<arg>${password}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221115 14:09:01.772" level="INFO">Typing text 'Medad@123' into text field '//input[@id='login_password']'.</msg>
-<status status="PASS" starttime="20221115 14:09:01.769" endtime="20221115 14:09:01.900"/>
-</kw>
-<status status="PASS" starttime="20221115 14:09:01.769" endtime="20221115 14:09:01.901"/>
-</kw>
-<kw name=" Click on Login button" library="Login">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${Login_Button}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221115 14:09:01.904" level="INFO">Clicking element '//button[@type='submit']'.</msg>
-<status status="PASS" starttime="20221115 14:09:01.902" endtime="20221115 14:09:01.990"/>
-</kw>
-<status status="PASS" starttime="20221115 14:09:01.902" endtime="20221115 14:09:01.990"/>
-</kw>
-<kw name="Home page is opened Successfully" library="Login">
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>${Success_Login}</arg>
-<arg>timeout=10</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20221115 14:09:01.991" endtime="20221115 14:09:07.064"/>
-</kw>
-<status status="PASS" starttime="20221115 14:09:01.991" endtime="20221115 14:09:07.064"/>
-</kw>
-<status status="PASS" starttime="20221115 14:08:49.877" endtime="20221115 14:09:07.065"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${Academic_Structure}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221115 14:09:07.066" level="INFO">Clicking element '//a[@href='/app/academic-structure']'.</msg>
-<status status="PASS" starttime="20221115 14:09:07.066" endtime="20221115 14:09:07.179"/>
-</kw>
-<status status="PASS" starttime="20221115 14:08:49.876" endtime="20221115 14:09:07.179"/>
-</kw>
-<kw name="Open the Institution page" library="Inistitutions">
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>${Institution_Link}</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20221115 14:09:07.181" endtime="20221115 14:09:07.666"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${Institution_Link}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221115 14:09:07.672" level="INFO">Clicking element '//a[@href='/app/institution']'.</msg>
-<status status="PASS" starttime="20221115 14:09:07.667" endtime="20221115 14:09:07.795"/>
-</kw>
-<status status="PASS" starttime="20221115 14:09:07.180" endtime="20221115 14:09:07.796"/>
-</kw>
-<kw name="Click button Add new Inistitutions" library="Inistitutions">
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>${Add_Inistitutions}</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20221115 14:09:07.798" endtime="20221115 14:09:08.976"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${Add_Inistitutions}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221115 14:09:08.977" level="INFO">Clicking element '//span[@data-label='Add%20Institution']'.</msg>
-<status status="PASS" starttime="20221115 14:09:08.976" endtime="20221115 14:09:09.373"/>
-</kw>
-<status status="PASS" starttime="20221115 14:09:07.796" endtime="20221115 14:09:09.374"/>
-</kw>
-<kw name="Fill Form of Add Inistitutions" library="Inistitutions">
-<kw name="Fill field Institution Code" library="Inistitutions">
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${Institution_Code_Field}</arg>
-<arg>${Institution_Code}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221115 14:09:09.377" level="INFO">Typing text 'KH-01' into text field '//input[@data-fieldname='institution_code']'.</msg>
-<status status="PASS" starttime="20221115 14:09:09.376" endtime="20221115 14:09:09.592"/>
-</kw>
-<status status="PASS" starttime="20221115 14:09:09.375" endtime="20221115 14:09:09.593"/>
-</kw>
-<kw name="Fill field Institution Name" library="Inistitutions">
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${Institution_Name_Field}</arg>
-<arg>${Institution_Name}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221115 14:09:09.595" level="INFO">Typing text 'MKhaled' into text field '//input[@data-fieldname='institution_name']'.</msg>
-<status status="PASS" starttime="20221115 14:09:09.594" endtime="20221115 14:09:09.789"/>
-</kw>
-<status status="PASS" starttime="20221115 14:09:09.594" endtime="20221115 14:09:09.790"/>
-</kw>
-<kw name="Select field Institutional Type" library="Inistitutions">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${Institutional_Type_Field}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221115 14:09:09.791" level="INFO">Clicking element '//input[@data-fieldname='institutional_type']'.</msg>
-<status status="PASS" starttime="20221115 14:09:09.790" endtime="20221115 14:09:09.897"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221115 14:09:11.907" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221115 14:09:09.898" endtime="20221115 14:09:11.907"/>
-</kw>
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>${Institutional_Type_Selected}</arg>
-<arg>timeout=10</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20221115 14:09:11.908" endtime="20221115 14:09:11.925"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${Institutional_Type_Selected}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221115 14:09:11.927" level="INFO">Clicking element '//ul[@id='awesomplete_list_4']/li[1]'.</msg>
-<status status="PASS" starttime="20221115 14:09:11.926" endtime="20221115 14:09:11.998"/>
-</kw>
-<status status="PASS" starttime="20221115 14:09:09.790" endtime="20221115 14:09:11.999"/>
-</kw>
-<kw name="Fill field Website" library="Inistitutions">
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${Website_Field}</arg>
-<arg>${Website}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221115 14:09:12.003" level="INFO">Typing text 'http://www.google.com' into text field '//input[@data-fieldname='website']'.</msg>
-<status status="PASS" starttime="20221115 14:09:12.000" endtime="20221115 14:09:12.233"/>
-</kw>
-<status status="PASS" starttime="20221115 14:09:11.999" endtime="20221115 14:09:12.233"/>
-</kw>
-<kw name="Fill field Email" library="Inistitutions">
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${Email_Field}</arg>
-<arg>${Email}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221115 14:09:12.237" level="INFO">Typing text 'test@test.com' into text field '//input[@data-fieldname='email']'.</msg>
-<status status="PASS" starttime="20221115 14:09:12.235" endtime="20221115 14:09:12.451"/>
-</kw>
-<status status="PASS" starttime="20221115 14:09:12.233" endtime="20221115 14:09:12.452"/>
-</kw>
-<kw name="Select field Ownership" library="Inistitutions">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${Ownership_Field}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221115 14:09:12.454" level="INFO">Clicking element '//input[@data-fieldname='ownership']'.</msg>
-<status status="PASS" starttime="20221115 14:09:12.453" endtime="20221115 14:09:12.548"/>
-</kw>
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>${Ownership_Selected}</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20221115 14:09:12.549" endtime="20221115 14:09:13.882"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${Ownership_Selected}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221115 14:09:13.884" level="INFO">Clicking element '//ul[@id='awesomplete_list_5']/li[1]'.</msg>
-<status status="PASS" starttime="20221115 14:09:13.883" endtime="20221115 14:09:13.953"/>
-</kw>
-<status status="PASS" starttime="20221115 14:09:12.453" endtime="20221115 14:09:13.954"/>
-</kw>
-<kw name="Fill field Institution Location" library="Inistitutions">
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${Location_Field}</arg>
-<arg>${Location}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221115 14:09:13.956" level="INFO">Typing text 'Tanta' into text field '//input[@data-fieldname='location'][@data-doctype='Institution']'.</msg>
-<status status="PASS" starttime="20221115 14:09:13.955" endtime="20221115 14:09:14.194"/>
-</kw>
-<status status="PASS" starttime="20221115 14:09:13.954" endtime="20221115 14:09:14.195"/>
-</kw>
-<kw name="Fill field MOE Number" library="Inistitutions">
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${MOE_Number_Field}</arg>
-<arg>${MOE_Number}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221115 14:09:14.197" level="INFO">Typing text '15' into text field '//input[@data-fieldname='moe_number']'.</msg>
-<status status="PASS" starttime="20221115 14:09:14.196" endtime="20221115 14:09:14.377"/>
-</kw>
-<status status="PASS" starttime="20221115 14:09:14.195" endtime="20221115 14:09:14.377"/>
-</kw>
-<kw name="Select field Time Zone" library="Inistitutions">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${Time_Zone_Field}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221115 14:09:14.380" level="INFO">Clicking element '//select[@data-fieldname='time_zone']'.</msg>
-<status status="PASS" starttime="20221115 14:09:14.379" endtime="20221115 14:09:14.537"/>
-</kw>
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>${Time_Zone_Selected}</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20221115 14:09:14.538" endtime="20221115 14:09:14.561"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${Time_Zone_Selected}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221115 14:09:14.563" level="INFO">Clicking element '//select[@data-fieldname='time_zone']/option[1]'.</msg>
-<status status="PASS" starttime="20221115 14:09:14.562" endtime="20221115 14:09:14.673"/>
-</kw>
-<status status="PASS" starttime="20221115 14:09:14.378" endtime="20221115 14:09:14.673"/>
-</kw>
-<status status="PASS" starttime="20221115 14:09:09.375" endtime="20221115 14:09:14.674"/>
-</kw>
-<kw name="click submit Institution Button" library="Inistitutions">
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>${Submit_Institution}</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20221115 14:09:14.676" endtime="20221115 14:09:14.693"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${Submit_Institution}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221115 14:09:14.694" level="INFO">Clicking element '//button[@data-label='Save']'.</msg>
-<status status="PASS" starttime="20221115 14:09:14.693" endtime="20221115 14:09:14.794"/>
-</kw>
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>${Successfully_Saved}</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20221115 14:09:14.794" endtime="20221115 14:09:15.695"/>
-</kw>
-<status status="PASS" starttime="20221115 14:09:14.675" endtime="20221115 14:09:15.696"/>
-</kw>
-<status status="PASS" starttime="20221115 14:08:49.876" endtime="20221115 14:09:15.696"/>
-</kw>
-<kw name="closing Browser" library="common" type="TEARDOWN">
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20221115 14:09:15.698" endtime="20221115 14:09:18.344"/>
-</kw>
-<status status="PASS" starttime="20221115 14:09:15.697" endtime="20221115 14:09:18.345"/>
-</kw>
-<status status="PASS" starttime="20221115 14:08:49.874" endtime="20221115 14:09:18.347"/>
+<status status="PASS" starttime="20221115 16:49:16.097" endtime="20221115 16:49:16.111"/>
 </test>
 <doc>MedadCMP LoginPage</doc>
-<status status="PASS" starttime="20221115 14:08:49.115" endtime="20221115 14:09:18.360"/>
+<status status="PASS" starttime="20221115 16:49:13.696" endtime="20221115 16:49:16.116"/>
 </suite>
 <statistics>
 <total>
@@ -279,9 +53,11 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="AcademicStructure">AcademicStructure</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Login">Login</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20221115 16:49:16.084" level="WARN">This is a deprecated import that will be removed in favor of RPA.Robocorp.WorkItems</msg>
+<msg timestamp="20221115 16:49:16.096" level="WARN">No input work items file found: None</msg>
 </errors>
 </robot>

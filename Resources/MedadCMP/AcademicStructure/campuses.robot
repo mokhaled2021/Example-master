@@ -4,9 +4,9 @@ Resource    ../AcademicStructure/Login.robot
 Resource    ../AcademicStructure/common.robot
 Variables    ../TestData/TestData.py
 Variables   ../Locators/locators.py
+Library    OperatingSystem
 
 *** keywords***
-
 Open the Cumpuses page
     Wait Until Page Contains Element    ${Campuses_Link}
     Click Element    ${Campuses_Link}
