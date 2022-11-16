@@ -1,5 +1,5 @@
 *** Settings ***
-Library     SeleniumLibrary
+Library     SeleniumLibrary  
 Resource    ../AcademicStructure/Login.robot
 Resource    Inistitutions.robot
 Resource    Colleges.robot
